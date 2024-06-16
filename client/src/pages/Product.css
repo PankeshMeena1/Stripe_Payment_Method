@@ -1,0 +1,104 @@
+/* Updated Cart Styles */
+
+.cart-container1 {
+  width: 90%; /* Adjusted width for better responsiveness */
+  margin: 2% auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-title1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em; /* Increased font size for title */
+}
+
+.cart-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center items horizontally */
+}
+
+.product-container1 {
+  flex: 1 1 calc(19.333% - 20px); /* Adjusted width for better spacing on larger screens */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-container1:hover {
+  transform: scale(0.98); /* Slightly reduce size on hover */
+}
+
+.product-image1 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-info1 {
+  padding: 10px;
+  text-align: left; /* Align text to the left */
+}
+
+.product-info1 h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px; /* Restore margin bottom */
+}
+
+.product-info1 p {
+  font-size: 1em;
+  color: #888;
+  margin-bottom: 10px; /* Increase margin bottom for spacing */
+}
+
+.add-to-cart-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Add margin top */
+}
+
+.add-to-cart-button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 1200px) {
+  .product-container1 {
+    flex: 1 1 calc(33% - 20px); /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container1 {
+    flex: 1 1 calc(33% - 10px); /* Two columns on small screens with reduced gap */
+  }
+}
+
+@media (max-width: 476px) {
+  .cart-container1 {
+    width: 95%; /* Full width on extra small screens */
+    padding: 10px;
+  }
+
+  .product-container1 {
+    flex: 1 1 calc(100% - 20px); /* Full width on extra small screens */
+  }
+}
